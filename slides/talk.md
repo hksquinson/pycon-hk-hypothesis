@@ -910,9 +910,22 @@ surprise. Keep the vendor-neutral framing.
 
 # Thank You!
 
-Happy to take questions!
+<div style="display: flex; align-items: center; gap: 48px; margin-top: 48px;">
+  <div style="flex: 1;">
+    <p>Happy to take questions!</p>
+    <p>Repo: <a href="https://github.com/hksquinson/pycon-hk-hypothesis">https://github.com/hksquinson/pycon-hk-hypothesis</a></p>
+  </div>
+  <figure style="margin: 0; text-align: center;">
+    <img src="repo-qr.svg" alt="QR code for the talk repository" width="240">
+    <figcaption style="font-size: 20px; color: #555; margin-top: 8px;">Scan for the repo</figcaption>
+  </figure>
+</div>
 
-Repo: [https://github.com/hksquinson/pycon-hk-hypothesis](https://github.com/hksquinson/pycon-hk-hypothesis)
+<!--
+The QR code encodes the same repository URL printed on the slide. It was
+generated with segno; the SVG is slides/repo-qr.svg.
+-->
+
 
 ---
 
