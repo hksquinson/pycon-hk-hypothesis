@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pycon-hk-hypothesis"
+version = "0.1.0"
+description = "Talk demos and resources for Property-Based Testing with Hypothesis (PyCon HK 2026)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+    "hypothesis[cli,crosshair]>=6.170",
+    "numpy>=2.0",
+    "pytest>=8.3",
+    "pytest-xdist>=3.6",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=8.30",
+    "mypy>=1.14",
+    "ruff>=0.9",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pycon_hk_hypothesis"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+markers = [
+    "crosshair: tests that use the CrossHair symbolic-execution backend",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+# Slide code blocks are formatted for the screen, not by ruff.
+extend-exclude = ["slides"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true

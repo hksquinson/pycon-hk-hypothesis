@@ -1,0 +1,13 @@
+{
+  "name": "pycon-hk-hypothesis-slides",
+  "private": true,
+  "scripts": {
+    "slides:build": "marp slides/talk.md --html --output slides/dist/talk.html",
+    "slides:pdf": "marp slides/talk.md --html --pdf --allow-local-files --output slides/dist/talk.pdf",
+    "slides:watch": "marp --watch --server slides/talk.md"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.5.1",
+    "markdown-it-highlight-lines": "^1.0.2"
+  }
+}

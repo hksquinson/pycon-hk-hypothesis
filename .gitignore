@@ -1,1 +1,24 @@
-scratchpad
+# Local-only planning notes
+scratchpad/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+/dist/
+build/
+*.egg-info/
+
+# Slides / Node
+node_modules/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
